@@ -231,22 +231,22 @@ with tab2:
     def get_feature_group(feature):
 
         if feature.startswith('Crop_'):
-            return '작물 종류'
+            return 'Crop'
 
         if feature.startswith('State_'):
-            return '지역'
+            return 'State'
 
-        feature_names_kr = {
-            'Area': '재배 면적',
-            'Annual_Rainfall': '연간 강수량',
-            'Fertilizer': '비료 사용량',
-            'Pesticide': '농약 사용량',
-            'Avg_Temperature': '평균 기온',
-            'Max_Temperature': '최고 기온',
-            'Min_Temperature': '최저 기온'
+        feature_names_en = {
+            'Area': 'Area',
+            'Annual_Rainfall': 'Annual Rainfall',
+            'Fertilizer': 'Fertilizer',
+            'Pesticide': 'Pesticide',
+            'Avg_Temperature': 'Average Temperature',
+            'Max_Temperature': 'Maximum Temperature',
+            'Min_Temperature': 'Minimum Temperature'
         }
 
-        return feature_names_kr.get(feature, feature)
+        return feature_names_en.get(feature, feature)
 
 
     importance_df['Feature_Group'] = (
